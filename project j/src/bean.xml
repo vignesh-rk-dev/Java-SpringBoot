@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- Define UserRep bean -->
+    <bean id="userRep" class="com.pack.UserRep"/>  <!-- create the instance of userrep ___ 4  -->
+    <!-- Define UserServ bean and inject the UserRep dependency -->
+    <bean id="userServ" class="com.pack.Userserv">
+    <!-- field injection is done through the setter method here -->
+    <property name="rep" ref="userRep"/>
+    </bean>
+
+</beans>

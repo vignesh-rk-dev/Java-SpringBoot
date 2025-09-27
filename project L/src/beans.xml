@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="employee" class="com.example.Employee" depends-on="salary">
+    	<constructor-arg index="0" value="101"/>
+    	<constructor-arg index="1" value="vignesh"/>
+    	<constructor-arg index="2" ref="salary"/>
+    </bean>
+    
+    <bean id="salary" class="com.example.Salary">
+    	<constructor-arg index="0" value="10000.0"/>
+    	<constructor-arg index="1" value="3000.0"/>
+    	<constructor-arg index="2" value="1000.0"/>
+    </bean>
+
+</beans>
