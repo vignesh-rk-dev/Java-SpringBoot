@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="exam" class="com.spring.ExamResultBean">
+      <property name="rno" value="101"></property>
+      <property name="sname" value="Vignesh"></property>
+      <property name="m1" value="89"></property>
+      <property name="m2" value="84"></property>
+    
+    </bean>
+
+</beans>
